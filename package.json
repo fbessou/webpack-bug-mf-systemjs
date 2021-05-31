@@ -1,0 +1,12 @@
+{
+  "name": "webpack-bug-mf-systemjs",
+  "private": true,
+  "workspaces": [
+    "host",
+    "plugin"
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:fbessou/webpack-bug-mf-systemjs.git",
+  "license": "MIT"
+}
