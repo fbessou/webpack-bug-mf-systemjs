@@ -1,12 +1,12 @@
 const webpack = require('webpack');
-const {ContainerPlugin} = require('webpack').container;
+const {ModuleFederationPlugin} = require('webpack').container;
 
 module.exports = {
     entry: './src/index.js',
     target: 'web',
     mode: 'development',
     plugins: [
-        new ContainerPlugin({
+        new ModuleFederationPlugin({
             name: 'myAwesomePlugin',
             filename: 'remoteEntry.js',
             exposes: {
