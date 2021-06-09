@@ -2,7 +2,10 @@ const webpack = require('webpack');
 const {ModuleFederationPlugin} = require('webpack').container;
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        myAwesomePlugin: './src/setPublicPath.js'
+    },
     target: 'web',
     mode: 'development',
     plugins: [
@@ -11,7 +14,8 @@ module.exports = {
             filename: 'remoteEntry.js',
             exposes: {
                 './plugin1': './src/plugin1',
-                './plugin2': './src/plugin2'
+                './plugin2': './src/plugin2',
+                './setPublicPath': './src/setPublicPath',
             },
             library: {
                 type: 'system',
